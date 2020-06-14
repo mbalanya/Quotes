@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Quote } from './quote'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Quotes';
+  quotes:Quote[] = [
+    {id:1, name:'This is a sample quote'},
+    {id:1, name:'This is another sample quote'},
+    {id:1, name:'This is a third sample quote'},
+    {id:1, name:'This is a forth sample quote'}
+  ];
 }
