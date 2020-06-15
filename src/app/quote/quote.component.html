@@ -11,6 +11,9 @@
           <br>
           <h4 id={{i}}>{{ quote.name }}</h4>
 
+          <p (click)="addLike()">Like {{quote.upVotes}}</p>
+            <p (click)="addDislike()">Dislike {{quote.downVotes}}</p> 
+
           <p>created on {{quote.completeDate|date}}</p>
           <button (click)='toggleDetails(i)'>Toggle Details</button>
         </div>
