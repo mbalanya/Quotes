@@ -9,10 +9,10 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    new Quote(1, 'Person1', 'This is a sample quote'),
-    new Quote(2, 'Person2', 'This is another sample quote'),
-    new Quote(3, 'Person3', 'This is a third sample quote'),
-    new Quote(4, 'Person4', 'This is a forth sample quote')
+    new Quote(1, 'Person1', 'This is a sample quote', new Date(2019,6,9)),
+    new Quote(2, 'Person2', 'This is another sample quote', new Date(2022,1,12)),
+    new Quote(3, 'Person3', 'This is a third sample quote', new Date(2019,0,18)),
+    new Quote(4, 'Person4', 'This is a forth sample quote', new Date(2019,2,14))
   ];
 
   toggleDetails(index){
