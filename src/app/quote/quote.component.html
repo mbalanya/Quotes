@@ -12,10 +12,17 @@
 
           <div class='card'>
             <div class='card-header'>
-              <h4 class='card-title' id={{i}}>{{ quote.name }}</h4>
+              <div class='row'>
+                <div class='col-8'>
+                  <h4 class='card-title' id={{i}}>{{ quote.name }}</h4>
+                </div>
+                <div class='col-4'>
+                  <p (click)="addLike(quote)">Likes {{quote.upVotes}}</p>
+                  <p (click)="addDislike(quote)">Dislikes {{quote.downVotes}}</p>
+                </div>
+              </div>
             </div>
             <div class='card-body'>
-              <p (click)="addLike()">Like {{quote.upVotes}}</p><p (click)="addDislike()">Dislike {{quote.downVotes}}</p>
               <button (click)='toggleDetails(i)'>Toggle Details</button>
               <div *ngIf='quote.showDescription'>
                 <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
